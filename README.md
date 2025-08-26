@@ -1,12 +1,10 @@
 # MLCybersecurity
 
 
-###Network Intrusion Detection with Machine Learning###
-This project demonstrates how to build and compare different machine learning models for a Network Intrusion Detection System (NIDS). The goal is to classify network traffic as either 'normal' or an 'anomaly' (attack).
+# Network Intrusion Detection with Machine Learning
+This project demonstrates how to build and compare different machine learning models for a Network Intrusion Detection System (NIDS). The goal is to classify network traffic as either 'normal' or an 'anomaly' (attack).The models are trained on fake generated NSL-KDD dataset, a benchmark dataset for intrusion detection.
 
-The models are trained on fake generated NSL-KDD dataset, a benchmark dataset for intrusion detection.
-
-Tech Stack:
+# Tech Stack:
 
 Python: Core programming language.
 
@@ -18,7 +16,7 @@ Pandas: For data manipulation.
 
 Streamlit: To create an interactive dashboard that simulates a real-time monitoring system.
 
-Project Structure
+# Project Structure
 
 network-intrusion-detection/
 ├── train_models.py       # Script to preprocess data, train, and save the models.
@@ -26,7 +24,7 @@ network-intrusion-detection/
 ├── requirements.txt
 └── README.md
 
-How It Works
+# How It Works
 
 Data Preparation: The generated NSL-KDD dataset is loaded and preprocessed. This involves one-hot encoding categorical features, scaling numerical features, and creating a binary label ('normal' vs. 'anomaly').
 
@@ -50,31 +48,31 @@ The dashboard preprocesses the input in the same way as the training data and fe
 
 Each model's prediction (Normal or Anomaly) is displayed, allowing for a direct comparison of their outputs.
 
-##Results##
+# Results
 
-
---- Evaluation Results for Random Forest ---
+Evaluation Results for Random Forest 
 Accuracy:  1.0000
 Precision: 1.0000
 Recall:    1.0000
 F1-Score:  1.0000
+
 -----------------------------------------
 
-
---- Evaluation Results for SVM ---
+Evaluation Results for SVM 
 Accuracy:  1.0000
 Precision: 1.0000
 Recall:    1.0000
 F1-Score:  1.0000
+
 ----------------------------------------
 
-
---- Evaluation Results for Deep Learning (PyTorch) ---
+Evaluation Results for Deep Learning (PyTorch)
 Accuracy:  0.7500
 Precision: 0.6667
 Recall:    1.0000
 F1-Score:  0.8000
+
 ---------------------------------------------------
 
-Comments:
+# Comments:
 Based on the evaluation, the data balancing strategy was highly effective, completely resolving the models' initial failure to learn. The Random Forest and SVM models demonstrated flawless performance, achieving perfect 1.0 scores across all metrics, indicating they could perfectly classify every instance in this specific test set. While these results are excellent, such perfection on a small dataset can suggest a risk of overfitting. In contrast, the deep learning model delivered a more realistic and still very strong performance, achieving a perfect recall of 1.0—meaning it successfully identified every single attack—at the cost of a lower precision, which shows it produced some false alarms. Overall, while the classical models were the top performers, the deep learning model's results better reflect a typical trade-off in real-world cybersecurity applications.
