@@ -52,6 +52,7 @@ Each model's prediction (Normal or Anomaly) is displayed, allowing for a direct 
 
 ##Results##
 
+
 --- Evaluation Results for Random Forest ---
 Accuracy:  1.0000
 Precision: 1.0000
